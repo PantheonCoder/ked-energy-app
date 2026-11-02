@@ -1,0 +1,12 @@
+{
+  "name": "ked-energy-app",
+  "version": "1.0.0",
+  "description": "Kurdistan Energy Department Full-Stack Portal",
+  "scripts": {
+    "dev": "node start-all.js",
+    "start": "node start-all.js",
+    "client": "npm --prefix client run dev",
+    "server": "node server/server.js",
+    "build:client": "npm --prefix client run build"
+  }
+}

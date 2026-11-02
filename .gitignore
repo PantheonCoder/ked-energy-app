@@ -1,0 +1,10 @@
+node_modules/
+**/node_modules/
+.vscode/
+client/dist/
+server/ked_data.json
+output/
+tmp/
+.env
+.env.*
+!.env.example
