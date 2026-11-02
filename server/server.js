@@ -814,9 +814,9 @@ app.post('/api/system/reset', (req, res) => {
   res.json({ success: true, message: 'System state reset to initial seed' });
 });
 
-// Serve static build if available
+// Serve the production build locally. Vercel serves these files from its CDN.
 const clientDist = path.join(__dirname, '..', 'client', 'dist');
-if (fs.existsSync(clientDist)) {
+if (!process.env.VERCEL && fs.existsSync(clientDist)) {
   app.use(express.static(clientDist));
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) return next();
@@ -824,7 +824,10 @@ if (fs.existsSync(clientDist)) {
   });
 }
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`⚡ KED (Kurdistan Energy Department) API running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`⚡ KED (Kurdistan Energy Department) API running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

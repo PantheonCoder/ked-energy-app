@@ -27,9 +27,9 @@ The browser opens at <http://localhost:5173>. Keep the terminal open while using
 
 ## Publish a public demo for free
 
-The repository includes a Render Blueprint in `render.yaml`. After uploading this project to GitHub, sign in at <https://dashboard.render.com>, choose **New → Blueprint**, connect the GitHub repository, and deploy the `ked-demo-app` web service on the **Free** plan. Render builds the frontend and serves it together with the API.
+The repository includes Vercel configuration. Sign in at <https://vercel.com/new>, import `PantheonCoder/ked-energy-app` from GitHub, and deploy using the defaults in `vercel.json`. Vercel builds the frontend and hosts the API.
 
-Free Render services sleep when idle and wake on the next visit. This demo stores its data in a local JSON file, which Render may erase on sleep, restart, or redeploy. The app is for demonstration only: its demo credentials and data are public, and it is not suitable for real customer information, payments, or production use.
+Vercel's Hobby plan is free for personal projects. The demo database uses temporary serverless storage and may reset; don't enter real personal information or use this app for production or real payments. The source and demo credentials are public.
 
 ## Open it on a phone
 

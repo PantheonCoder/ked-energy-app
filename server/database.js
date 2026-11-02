@@ -1,7 +1,10 @@
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const DB_FILE = path.join(__dirname, 'ked_data.json');
+const DB_FILE = process.env.VERCEL
+  ? path.join(os.tmpdir(), 'ked_data.json')
+  : path.join(__dirname, 'ked_data.json');
 
 // Initial seed dataset
 const initialData = {

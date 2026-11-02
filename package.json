@@ -8,5 +8,9 @@
     "client": "npm --prefix client run dev",
     "server": "node server/server.js",
     "build:client": "npm --prefix client run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
   }
 }

@@ -2,6 +2,7 @@ node_modules/
 **/node_modules/
 .vscode/
 client/dist/
+.vercel/
 server/ked_data.json
 output/
 tmp/
