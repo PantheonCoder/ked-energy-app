@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Kurdistan Energy Department Full-Stack Portal",
   "scripts": {
+    "setup": "npm ci --prefix server && npm ci --prefix client",
     "dev": "node start-all.js",
     "start": "node start-all.js",
     "client": "npm --prefix client run dev",

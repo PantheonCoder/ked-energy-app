@@ -8,22 +8,20 @@
 
 ## First-time setup
 
-1. Extract the archive.
-2. Open PowerShell in the extracted `ked-app` folder.
-3. Install dependencies:
+1. Extract the archive to a folder.
+2. Install [Node.js 18 or later](https://nodejs.org/) if it isn't already installed.
+3. Open `ked-app.code-workspace` from the extracted folder in VS Code, and allow the workspace if VS Code asks.
+4. In VS Code, choose **Terminal → Run Task → Install KED Dependencies** and wait for it to finish. You only need to do this once.
+5. Choose **Terminal → Run Task → Start KED App**. The app opens at <http://localhost:5173>.
+
+You can also run the setup from a terminal in the project folder:
 
    ```powershell
-   npm --prefix server install
-   npm --prefix client install
-   ```
-
-4. Start the app:
-
-   ```powershell
+   npm run setup
    npm run dev
    ```
 
-The browser opens at <http://localhost:5173>. Keep the terminal open while using the app. Press `Ctrl+C` in that terminal to stop both the web app and API.
+Keep the VS Code task or terminal running while using the app. Press `Ctrl+C` in its terminal to stop both the web app and API.
 
 ## Publish a public demo for free
 

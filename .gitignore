@@ -1,6 +1,8 @@
 node_modules/
 **/node_modules/
-.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
 client/dist/
 .vercel/
 server/ked_data.json
